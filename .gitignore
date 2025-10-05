@@ -1,3 +1,4 @@
 requirements.md
 meetingbank/*
 !meetingbank/token.ipynb
+terraform/.terraform/

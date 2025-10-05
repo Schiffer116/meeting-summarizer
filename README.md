@@ -15,9 +15,7 @@
 
 ### Solution design:
 
-A **Retrieval-Augmented Generation (RAG)** pipeline to let users request a deeper explanation for any summary bullet point.
-When a user clicks on a bullet, the system retrieves relevant transcript segments or meeting notes from the Knowledge Base (OpenSearch) using the bullet text as the query.
-These retrieved passages are then passed to the LLM with a carefully constructed prompt that asks for an elaborated, context-aware explanation ensuring that expansions remain grounded in the actual meeting content, not hallucination.
+A **Retrieval-Augmented Generation (RAG)** pipeline to let users request a deeper explanation for any summary bullet point. When a user clicks on a bullet, the system retrieves relevant transcript segments or meeting notes from the Knowledge Base (OpenSearch) using the bullet text as the query. These retrieved passages are then passed to the LLM with a carefully constructed prompt that asks for an elaborated, context-aware explanation ensuring that expansions remain grounded in the actual meeting content, not hallucination.
 
 **Flow:**
 
@@ -64,7 +62,17 @@ Optional:
 
 ### **Model selection:**
 
+**Claude 3.0 Sonnet**
+
+Criteria:
+
+- **Base model:** Use a **general-purpose foundation model** optimized for summarization and reasoning on AWS (Claude, Mistral, or Titan Text G1 family).
+- **Context window size**: 200K tokens gives of room to include more retrieved transcript chunks + the prompt without hitting limits.
+- **Cost trade-off**: While Claude 3 Sonnet is more expensive than lighter models the extra cost is justified by improved output quality and reduced errors.
+
 ## Infrastructure as Code (Terraform)
+
+![Terraform file here](terraform/main.tf)
 
 ## Front-End Prototype (React)
 
