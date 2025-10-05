@@ -3,8 +3,8 @@
 | Task                        |     |
 | --------------------------- | --- |
 | System Architecture Diagram | ✅  |
-| LLM Prompting Strategy      |     |
-| Infrastructure as Code      |     |
+| LLM Prompting Strategy      | ✅  |
+| Infrastructure as Code      | ✅  |
 | Front-End Prototype         | ✅  |
 
 ## System Architecture Diagram
