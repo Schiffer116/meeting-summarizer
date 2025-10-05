@@ -2,14 +2,14 @@
 
 | Task                        |     |
 | --------------------------- | --- |
-| System Architecture Diagram | x   |
+| System Architecture Diagram | ✅  |
 | Prompting                   |     |
 | Terraform                   |     |
-| React                       |     |
+| React                       | ✅  |
 
 ## System Architecture Diagram
 
-![Architecture Diagram]()
+![Architecture Diagram](architecture.png)
 
 ## LLM Prompting Strategy
 
@@ -22,3 +22,5 @@
 ## Infrastructure as Code (Terraform)
 
 ## Front-End Prototype (React)
+
+![React Prototype](frontend.png)

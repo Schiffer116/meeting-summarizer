@@ -9,9 +9,11 @@ export default function SummaryNote(
     ExtraProps,
 ) {
   const { children, ...rest } = props;
+
   const [detailedNote, setDetailedNote] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
   const [expanded, setExpanded] = useState(false);
+
   const contentRef = useRef<HTMLDivElement>(null);
   const [maxHeight, setMaxHeight] = useState("0px");
 
@@ -60,7 +62,7 @@ export default function SummaryNote(
           variant="ghost"
           size="sm"
           onClick={() => setExpanded(!expanded)}
-          className="!p-0 text-muted-foreground transition-colors duration-300 hover:text-foreground hover:bg-accent"
+          className="!p-0 cursor-pointer text-muted-foreground transition-colors duration-300 hover:text-foreground hover:bg-accent"
         >
           <ChevronUp
             className={`transition-transform duration-300 ${expanded && "rotate-180"}`}

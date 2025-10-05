@@ -18,7 +18,7 @@ export default function MeetingSummary() {
             strong: (props) => (
               <strong
                 {...props}
-                className="group-hover:text-primary font-semibold"
+                className="group-hover:text-primary font-semibold transition-colors duration-300 ease-in-out"
               />
             ),
             li: MeetingNote,
